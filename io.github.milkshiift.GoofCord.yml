@@ -31,7 +31,8 @@ modules:
       - ./GoofCord.AppImage --appimage-extract
       - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
         squashfs-root/goofcord.desktop
-      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
+      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png
+        /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
       - install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
       - install -Dm755 startgoofcord /app/bin/startgoofcord
       - install -D io.github.milkshiift.GoofCord.metainfo.xml -t /app/share/metainfo/
@@ -42,7 +43,7 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/5fb4b798ee6232ec8a56e336ec53c130adb31ca6/meta/io.github.milkshiift.GoofCord.metainfo.xml
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/main/meta/io.github.milkshiift.GoofCord.metainfo.xml
         sha512: f1a84702d2e0b64dc6123bb86db484d29eeb052d6e8718d05a77e777b1e0bb2949f36a15efe2a87c560028d91f4898248ebb10b087ed64341b6a18b49bc01d1f
         x-checker-data:
           type: json
@@ -51,7 +52,7 @@ modules:
           url-query: .download_url
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.4.2/GoofCord-1.4.2-linux-x86_64.AppImage
+        url: https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-1.4.2-linux-x86_64.AppImage
         sha512: 01a709ad711eb32c83de2256f3261445ff83edd4c7e928115ebf419c0d5d2686edebda0791659f84f913f76236ea27b0f0d11ddd2cbe1caac76dd2900c3d6acd
         only-arches: [x86_64]
         dest-filename: GoofCord.AppImage
@@ -61,10 +62,11 @@ modules:
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: '"https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-" + $version + "-linux-x86_64.AppImage"'
+          url-query: '"https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-"
+            + $version + "-linux-x86_64.AppImage"'
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.4.2/GoofCord-1.4.2-linux-arm64.AppImage
+        url: https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-1.4.2-linux-arm64.AppImage
         sha512: ea2589cdab5161d9872d49f72351ae46acd9894e7c2883a237fd58306ee2c1fab2b00889dd9429cd8c7f13e5a12e2989bc871fbc1df630bda7f3d3d39eddce38
         only-arches: [aarch64]
         dest-filename: GoofCord.AppImage
@@ -74,5 +76,6 @@ modules:
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: '"https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-" + $version + "-linux-arm64.AppImage"'
+          url-query: '"https://github.com/Milkshiift/GoofCord/releases/latest/download/GoofCord-"
+            + $version + "-linux-arm64.AppImage"'
 
