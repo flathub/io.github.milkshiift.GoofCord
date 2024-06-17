@@ -31,7 +31,8 @@ modules:
       - ./GoofCord.AppImage --appimage-extract
       - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
         squashfs-root/goofcord.desktop
-      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
+      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png
+        /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
       - install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
       - install -Dm755 startgoofcord /app/bin/startgoofcord
       - install -D io.github.milkshiift.GoofCord.metainfo.xml -t /app/share/metainfo/
@@ -42,7 +43,7 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/ba6b79f60ef77e3141af6c66f6e571a6c2e78b5b/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/main/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
         sha512: 43b475a18e83bae9b1c31b72229a99a97e55771fec4a29d720acbf856128359ae551ddb542788ee2be93020faf83245eaca2d2d0aff3b00d82dd2040655a1f8c
         x-checker-data:
           type: json
@@ -61,7 +62,8 @@ modules:
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: '"https://github.com/Milkshiift/GoofCord/releases/download/" + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
+          url-query: '"https://github.com/Milkshiift/GoofCord/releases/download/"
+            + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
 
       - type: file
         url: https://github.com/Milkshiift/GoofCord/releases/download/v1.4.3/GoofCord-1.4.3-linux-arm64.AppImage
@@ -74,5 +76,6 @@ modules:
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
           timestamp-query: .published_at
-          url-query: '"https://github.com/Milkshiift/GoofCord/releases/download/" + $tag + "/GoofCord-" + $version + "-linux-arm64.AppImage"'
+          url-query: '"https://github.com/Milkshiift/GoofCord/releases/download/"
+            + $tag + "/GoofCord-" + $version + "-linux-arm64.AppImage"'
 
