@@ -48,8 +48,8 @@ modules:
         sha512: c0f65cf8e2934aaa5639555ad1d9737efeeca07ba60b04551eb7d4df408e4f34fe6fcf26d1a079f130a32fd59cdff790d2c6ba65c0f32e05fd5ee7c8f9c565e1
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.7.0/GoofCord-1.7.0-linux-x86_64.AppImage
-        sha512: 108cbd72e980f01239b82b643695a7b3817319a5d54b45134592706df34b31f64a58591af07e3abe18bb20579c0264948d2cdeeceb0e2e7a284a5c258f81c6ea
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.7.1/GoofCord-1.7.1-linux-x86_64.AppImage
+        sha512: f0c4e5efa4bc39ab29fa85d61a5b6cb2573e7942c896b68c20a18eac397883209480987fa6cbaac0b2c655feb6f5a0e98c8f8b182c40a84dcf1e3b3e831eaa16
         only-arches: [x86_64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
@@ -62,8 +62,8 @@ modules:
             + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.7.0/GoofCord-1.7.0-linux-arm64.AppImage
-        sha512: cdf8c13a2744f544a169d3998164b68ea071d0d07d0d2776b54c72ee90cd16fcc829d60c3e85a4a470a30d02a2ee4a1c23faebcce60a8d5bff73a867dc3199f9
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.7.1/GoofCord-1.7.1-linux-arm64.AppImage
+        sha512: 416c715094721f8bd292f45384179a53db71913f9459ae1559e50cacdc29492d418c41adabcb2bbd59511a4d6d67d1e1f630ac3e56e305753636d17728858e0f
         only-arches: [aarch64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
