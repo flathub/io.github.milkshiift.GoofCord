@@ -23,6 +23,8 @@ finish-args:
   - --filesystem=xdg-download # This and the above two are used for drag-n-drop, and download managing
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons # This is used to show the correct cursor on Wayland
   - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.kwalletd5
+  - --talk-name=org.kde.kwalletd6
 
 modules:
   - name: desktop
