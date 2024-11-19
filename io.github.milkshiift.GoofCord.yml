@@ -25,16 +25,23 @@ finish-args:
   - --talk-name=org.freedesktop.secrets
 
 modules:
+  - name: desktop
+    buildsystem: simple
+    build-commands:
+      - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID io.github.milkshiift.GoofCord.desktop
+      - install -D io.github.milkshiift.GoofCord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
+    sources:
+      - type: dir
+        path: .
+
   - name: GoofCord
     buildsystem: simple
     build-commands:
       - chmod +x GoofCord.AppImage
       - ./GoofCord.AppImage --appimage-extract
-      - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
-        squashfs-root/goofcord.desktop
-      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png
-        /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
-      - install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
+      #- desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID squashfs-root/goofcord.desktop
+      - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
+      #- install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
       - install -Dm755 startgoofcord /app/bin/startgoofcord
       - install -D io.github.milkshiift.GoofCord.metainfo.xml -t /app/share/metainfo/
       - mv squashfs-root /app/bin/goofcord
