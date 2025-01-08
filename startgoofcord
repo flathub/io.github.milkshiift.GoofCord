@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FEATURES="UseSkiaRenderer,VaapiVideoDecoder,VaapiVideoEncoder,PulseaudioLoopbackForScreenShare,VaapiVideoDecodeLinuxGL"
+FEATURES="UseSkiaRenderer,VaapiVideoDecoder,VaapiVideoEncoder,PulseaudioLoopbackForScreenShare,VaapiVideoDecodeLinuxGL,WaylandWindowDecorations"
 export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-io.github.milkshiift.GoofCord}"
 # https://wiki.archlinux.org/title/Chromium
 declare -a FLAGS=(
@@ -9,6 +9,8 @@ declare -a FLAGS=(
   --ignore-gpu-blocklist         # Forcing hardware acceleration
   --enable-zero-copy             # Hardware acceleration
   --enable-drdc                  # Hardware acceleration
+  --enable-wayland-ime
+  --wayland-text-input-version=3
 )
 
 WAYLAND_SOCKET=${WAYLAND_DISPLAY:-"wayland-0"}
