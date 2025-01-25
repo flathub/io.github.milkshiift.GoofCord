@@ -55,8 +55,8 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/0bc291470360383f2b869b2fce27981c1075f97e/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: 37f63ca87c23681595047bb8d3edb08d29b9f4e9334b24727c516cf5db9cc56a6c04bc2f6c28cb7c88a2f56c6f46c6514585f2d5b4b9e90bec76abde712f73aa
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/ba1787b98da4c4058d9e7e79c3cb46d757211bc1/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: c6f3b88c113505ecc019151a03928f8284cab56a9eaba8c55242cefbb0a4eb92512460f99a971e38d9b7d90afcfc367606441780aaddc34624f510db3e789e8b
 
       - type: file
         url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.2/GoofCord-1.8.2-linux-x86_64.AppImage
