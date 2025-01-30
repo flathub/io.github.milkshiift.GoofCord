@@ -31,4 +31,10 @@ Flatpak applications need certain changes inside of the flatpak environment to c
 Suggested changes to accomplish these needs :
 
 1. Add `--filesystem=xdg-run/.flatpak/io.github.milkshiift.GoofCord:create` and `--filesystem=xdg-run/discord-ipc-*` to the global Flatpak permissions
+```sh
+flatpak override --user --filesystem=xdg-run/.flatpak/io.github.milkshiift.GoofCord:create && \
+ln -s $XDG_RUNTIME_DIR/.flatpak/io.github.milkshiift.GoofCord/xdg-run/discord-ipc-0 $XDG_RUNTIME_DIR/discord-ipc-0 && \
+flatpak override --user --filesystem=xdg-run/discord-ipc-* && \
+flatpak run io.github.milkshiift.GoofCord
+```
 2. Restart
