@@ -56,12 +56,12 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/ba1787b98da4c4058d9e7e79c3cb46d757211bc1/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: c6f3b88c113505ecc019151a03928f8284cab56a9eaba8c55242cefbb0a4eb92512460f99a971e38d9b7d90afcfc367606441780aaddc34624f510db3e789e8b
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/abaef9334e1db90dea02b8c04d4b3176a8692955/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: 24f7feea0dda36571aae142bac3a8c4bc9f4290e625ac977f3e0ceadbc6f0c0a49aa69b325e3b17177975df1822d12b57f5558a5cdb4ade02a90d4c8d5cba166
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.2/GoofCord-1.8.2-linux-x86_64.AppImage
-        sha512: b566c09223046bd4beb92328e35e64df85de33ac599824ae175cbe693bbd68dc1c4a8a17ca89ee1d029278286f2cafb123b95473f004ab34520b9105a3d2f7bc
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.3/GoofCord-1.8.3-linux-x86_64.AppImage
+        sha512: f07b346eac39233cbcca3b9d4a0d65f0944a286b0d1a0e629c8c92e3dc093c1731b0172d47f5daf028a1dc5cceb0eff2cf993221237edd69a6cd640d2d2b0b87
         only-arches: [x86_64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
@@ -74,8 +74,8 @@ modules:
             + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.2/GoofCord-1.8.2-linux-arm64.AppImage
-        sha512: 93249e2a8a940bade75a24d1dd67e5b2c3fe0ec98f032a189be73a62aa6845507edffbabbdae778bc98a168e2e2db31c1e8f134cba95188092fc34f103e6084c
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.3/GoofCord-1.8.3-linux-arm64.AppImage
+        sha512: 8061eb535e42f1073368578b2966dbcfecc58d0c365c85a55f24bdb825932baae10e778f18aecbe943b0c84d8009f10a9f24e95cb89a88f9d2fd3ca22e0a0196
         only-arches: [aarch64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
