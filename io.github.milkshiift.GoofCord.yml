@@ -28,25 +28,25 @@ finish-args:
   - --talk-name=org.kde.kwalletd6
 
 modules:
-  - name: desktop
-    buildsystem: simple
-    build-commands:
-      - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
-        io.github.milkshiift.GoofCord.desktop
-      - install -D io.github.milkshiift.GoofCord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
-    sources:
-      - type: dir
-        path: .
+  # - name: desktop
+  #   buildsystem: simple
+  #   build-commands:
+  #     - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
+  #       io.github.milkshiift.GoofCord.desktop
+  #     - install -D io.github.milkshiift.GoofCord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
+  #   sources:
+  #     - type: dir
+  #       path: .
 
   - name: GoofCord
     buildsystem: simple
     build-commands:
       - chmod +x GoofCord.AppImage
       - ./GoofCord.AppImage --appimage-extract
-      #- desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID squashfs-root/goofcord.desktop
+      - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID squashfs-root/goofcord.desktop
       - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png
         /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
-      #- install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
+      - install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
       - install -Dm755 startgoofcord /app/bin/startgoofcord
       - install -D io.github.milkshiift.GoofCord.metainfo.xml -t /app/share/metainfo/
       - mv squashfs-root /app/bin/goofcord
@@ -56,8 +56,8 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/3109591537f24970e43437a466f9b7d28d8cdba5/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: 397855b795a3540ef436c482c1d8eec5dcd106723031e493f0ee13d3c8f7bf9edd77c6519cc64c2c80702bea7582fee4113128dcaa5620e923bf8288ee3b9148
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/e7141701f438a48f26240106cc3c65366239049d/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: 522af8fe84513499f83f26778073ee56ceb2aa5bb32f115f674d813ea47a18b2e6f5e7f7e11a2337ba55afe4218a1ac2ffc806a9d7f4cc83088216c33211bf31
 
       - type: file
         url: https://github.com/Milkshiift/GoofCord/releases/download/v1.8.5/GoofCord-1.8.5-linux-x86_64.AppImage
