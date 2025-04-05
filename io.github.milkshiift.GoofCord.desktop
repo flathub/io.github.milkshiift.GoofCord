@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GoofCord
+Exec=startgoofcord
+Terminal=false
+Type=Application
+Icon=io.github.milkshiift.GoofCord
+Categories=Network;InstantMessaging
+Comment=Take control of your Discord experience with GoofCord – the highly configurable and privacy-minded discord client.
+StartupWMClass=GoofCord
+Keywords=Discord;
+X-Flatpak=io.github.milkshiift.GoofCord
