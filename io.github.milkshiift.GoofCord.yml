@@ -49,8 +49,8 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/v1.8.6/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: 97dfa290732c2954dce74176261d716b3ce675c8b4f1625a56b9f01183c26734f04aa12f354460c8d3a6e01060edbaadc58a158ef5ca0af88d620dadd45e0585
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/b5b056dd9b35379866114af15d9feae2d8d91425/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: 9d21a9a8f229c0a092430bd45a10b45e387eecac01c648a74c4988071bca0a89fc5d29690fa323f1aa831aeee55654cc3480ea09042925232d4b93e1b6aa9357
         x-checker-data:
           type: json
           url: https://api.github.com/repos/milkshiift/GoofCord/releases/latest
