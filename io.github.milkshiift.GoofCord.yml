@@ -12,11 +12,11 @@ separate-locales: false
 
 finish-args:
   - --socket=pulseaudio
-  - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
   - --share=network
   - --share=ipc
   - --talk-name=org.kde.StatusNotifierWatcher # Tray functionalities on KDE
+  - --talk-name=com.canonical.Unity # For setBadgeCount to work
   - --device=all # Needed for GPU acceleration and the webcam
   - --filesystem=xdg-videos:ro
   - --filesystem=xdg-pictures:ro
