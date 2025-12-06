@@ -48,8 +48,8 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/v1.11.2/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: 4b6499a61bbb3f2bbbf434eaa4a8af9d7d304ef09926c9340cb6ec3bf765021a206b0f090eeec845f6c6056a71386f930b269b095d93f21faa3ab05cd7031f70
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/v1.11.3/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: 8d531c70294642f3e03ee44be30910202f6f81bc756f1ec77d046d191b27226ac824b8c701a4f57e20db0cf1c57dc56ddb6ad8d1654b97989ec4f591db0eb66a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/milkshiift/GoofCord/releases/latest
@@ -60,8 +60,8 @@ modules:
           timestamp-query: .published_at
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.11.2/GoofCord-1.11.2-linux-x86_64.AppImage
-        sha512: ba050da4e5bebf983c6912d07ed410d49b97b90c9f147d27ee67fa62731294c9bb047936d22af49889e66ed85b3716530d1f3c8afa1ca4cc090b2662a6ee05eb
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.11.3/GoofCord-1.11.3-linux-x86_64.AppImage
+        sha512: 6e2c953f7f22968bd8502c0f97a25a16947b6fd5e58fff96055028c9612209ff495d36c87beb18673ec9587bbfe0a9832400f917a014e908be5b2e21d1bc1c2c
         only-arches: [x86_64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
@@ -74,8 +74,8 @@ modules:
             + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.11.2/GoofCord-1.11.2-linux-arm64.AppImage
-        sha512: 8172e2a552be36e30eb5dfb0106ad17f05ac0099f1ee1a736c70eeac0dfa9e1e6d0ac3e6efd2a179ccfbe763295711839c811c7633bc641af2ea94d4fee38a1e
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v1.11.3/GoofCord-1.11.3-linux-arm64.AppImage
+        sha512: 9b0256275fe73284ddcd3fb614eb279cbc31176a1a830f15180ad0012a19cb0c75023467c245f28507b55a01d7ad148cff43a886a0fbe8df04d6ede5999909c0
         only-arches: [aarch64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
