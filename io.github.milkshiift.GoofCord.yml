@@ -1,11 +1,11 @@
 app-id: io.github.milkshiift.GoofCord
 
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 
 base: org.electronjs.Electron2.BaseApp
-base-version: '25.08'
+base-version: '26.08'
 
 command: startgoofcord
 separate-locales: false
@@ -35,10 +35,10 @@ modules:
       - chmod +x GoofCord.AppImage
       - ./GoofCord.AppImage --appimage-extract
       - desktop-file-edit --set-key="Exec" --set-value="startgoofcord" --set-icon=$FLATPAK_ID
-        squashfs-root/goofcord.desktop
+        squashfs-root/io.github.milkshiift.GoofCord.desktop
       - install -D squashfs-root/usr/share/icons/hicolor/512x512/apps/goofcord.png
         /app/share/icons/hicolor/512x512/apps/io.github.milkshiift.GoofCord.png
-      - install -D squashfs-root/goofcord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
+      - install -D squashfs-root/io.github.milkshiift.GoofCord.desktop /app/share/applications/io.github.milkshiift.GoofCord.desktop
       - install -Dm755 startgoofcord /app/bin/startgoofcord
       - install -D io.github.milkshiift.GoofCord.metainfo.xml -t /app/share/metainfo/
       - mv squashfs-root /app/bin/goofcord
@@ -48,8 +48,8 @@ modules:
         path: startgoofcord
 
       - type: file
-        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/v2.3.0/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
-        sha512: 3683d372f0fb7b0e14fb87b6dd0cc0a9163b043a627ae967579fbe7e449f6ebeec5f14ec408d8cdae6216ce603c7f1cb08bf75961e03f4acf847ec7c4b197bb4
+        url: https://raw.githubusercontent.com/Milkshiift/GoofCord/v2.3.1/assetsDev/io.github.milkshiift.GoofCord.metainfo.xml
+        sha512: 83e830acd7ea6c4eb87de01737349014e144074147fcd0e09fb37356df2796506233a4ad1f10e9ce178da6a436ec547f56f4b21c0a0551542f8804b01c8114c2
         x-checker-data:
           type: json
           url: https://api.github.com/repos/milkshiift/GoofCord/releases/latest
@@ -60,8 +60,8 @@ modules:
           timestamp-query: .published_at
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v2.3.0/GoofCord-2.3.0-linux-x86_64.AppImage
-        sha512: 747dfd6c4021b5c23e80c77217ff7bd2a243d16b6d7bb1d0a1f31fd6eaa04c9037ec9c746223a65376b3dfd7cabb361273272ddbfc065a1b6effa683f8e9dac9
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v2.3.1/GoofCord-2.3.1-linux-x86_64.AppImage
+        sha512: eb6cef9eb19d9a629758ab911b740125b74877e674d9ff2aea00877716b7d38de9ad37739050725de25492445cccbdfefb65fb7a625c76c0857790b501307e8b
         only-arches: [x86_64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
@@ -74,8 +74,8 @@ modules:
             + $tag + "/GoofCord-" + $version + "-linux-x86_64.AppImage"'
 
       - type: file
-        url: https://github.com/Milkshiift/GoofCord/releases/download/v2.3.0/GoofCord-2.3.0-linux-arm64.AppImage
-        sha512: b38beb03b1de8ac9907a1bb92ad394f318a648c36c5a613e504b7eb3000a4918513de3be37ae20df585832b87f1024cfb6e14b4a97fe0cee2f57ccc48787ef1b
+        url: https://github.com/Milkshiift/GoofCord/releases/download/v2.3.1/GoofCord-2.3.1-linux-arm64.AppImage
+        sha512: 268972bedcb3142f4fcafc35668071fc7a0c6199254b0d9f3fb64709679e815dd992fbbaabbc5859a7e77b2d6ef6fb21b0a43de67f6df03e68c4fc89c15be093
         only-arches: [aarch64]
         dest-filename: GoofCord.AppImage
         x-checker-data:
